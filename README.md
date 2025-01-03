@@ -35,7 +35,7 @@ vite 專案執行開發模式 `npm run dev` 後即會自動監聽，不需要使
 ### Windows 版本
 1. 在 GitHub 建立一個新的 Repository
 
-2. 部署前請務必先將原始碼上傳到 GitHub Repository 也就是初始化 GitHub，因此通常第一步驟會在專案終端機輸入以下指令
+2. 部署前請務必先將原始碼上傳到 GitHub Repository 也就是初始化 GitHub (終端機 輸入git init)，因此通常第一步驟會在專案終端機輸入以下指令
 ```cmd
 git init # 若已經初始化過就可以不用輸入
 git add .
@@ -45,4 +45,5 @@ git remote add origin [GitHub Repositories Url]
 git push -u origin main // 僅限第一次輸入，往後只需要輸入 git push
 ```
 
-3. 初始化完畢後，執行 `npm run deploy` 指令進行自動化部署
+3. 初始化完畢後，和npm run build 進行專案編譯後(產生dist 資料夾) => 終端機 輸入npm inatall gh-pages => 打開 package.json檔案，在scripts 輸入"deploy":"gh-pages -d- dist"
+4. 執行 `npm run deploy` 指令進行自動化部署，gitHub 產生gh-pages分支
