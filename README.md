@@ -47,3 +47,5 @@ git push -u origin main // 僅限第一次輸入，往後只需要輸入 git pus
 
 3. 初始化完畢後，和npm run build 進行專案編譯後(產生dist 資料夾) => 終端機 輸入npm inatall gh-pages => 打開 package.json檔案，在scripts 輸入"deploy":"gh-pages -d- dist"
 4. 執行 `npm run deploy` 指令進行自動化部署，gitHub 產生gh-pages分支
+5. 回到 專案資料夾 Vite.config.js，在 export default defineConfig({}) 輸入 base: process.env.NODE_ENV === 'production' ? '/(此專案名稱) reactWeek1/' : '/',  ，把絕對路徑改成相對路徑
+6. 執行 npm run deploy 重新布署，此時 gitHub Pages 圖片路徑修改完成能夠正常顯示
